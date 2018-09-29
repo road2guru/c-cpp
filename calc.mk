@@ -15,9 +15,9 @@ CUR_DIR		:= $(shell pwd)
 BIN_DIR		:= $(CUR_DIR)/_bin_calc
 OBJ_DIR		:= $(CUR_DIR)/_build_calc
 SRC_DIR		:= $(CUR_DIR)/src
-CMOCKA_DIR	:= $(OBJ_DIR)/cmocka
+CMOCKA_DIR		:= $(OBJ_DIR)/cmocka
 
-INC_FLG		:= -I$(CUR_DIR)/inc -I$(CMOCKA_DIR)/include
+INC_FLG	:= -I$(CUR_DIR)/inc -I$(CMOCKA_DIR)/include
 
 TARGET		:= $(BIN_DIR)/calc-test
 SRCS		:= $(SRC_DIR)/calc-test.c $(SRC_DIR)/calc.c 
@@ -33,7 +33,7 @@ MKDIR		:= mkdir
 ECHO		:= echo
 CHMOD		:= chmod
 CFLAGS		:= -Wall -g -O2 $(INC_FLG) 
-LDFLAGS		:= -lcmocka -L$(BIN_DIR)
+LDFLAGS	:= -lcmocka -L$(BIN_DIR)
 
 all: $(TARGET)
 
